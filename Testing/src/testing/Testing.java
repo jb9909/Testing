@@ -29,7 +29,24 @@ public class Testing {
 	}
 	
 	private static void user1() {
-		Josh_testing.main1();
+		System.out.println("Welcome " + input2);
+		System.out.print("are you sure you want to launch this program? \n"
+				+ "y / n:");
+		getInput();
+		//creates a loop until user input is either y or n
+		while(input2.toLowerCase().equals("y") == false && input2.toLowerCase().equals("n") == false) {
+			System.out.println("INPUT NOT VALID! PLEASE TRY AGAIN!");
+			getInput();
+		}
+		//if input is y, starts method on josh_testing class
+		if(input2.toLowerCase().equals("y")) {
+			Josh_testing.main1();
+		}
+		//if input is n, ends program
+		else if(input2.toLowerCase().equals("n")) {
+			System.out.println("CLOSING PROGRAM!");
+		}
+		
 	}
 	
 	private static void user2() {
