@@ -20,6 +20,7 @@ public class Testing {
 		else {
 			System.out.println("no valid users in system detected!");
 		}
+		System.out.println("absolute end");
 
 	}
 	
@@ -28,8 +29,9 @@ public class Testing {
 		
 	}
 	
-	private static void user1() {
-		System.out.println("Welcome " + input2);
+	//checks with user if they want to run the program
+	private static void run() {
+		
 		System.out.print("are you sure you want to launch this program? \n"
 				+ "y / n:");
 		getInput();
@@ -38,18 +40,27 @@ public class Testing {
 			System.out.println("INPUT NOT VALID! PLEASE TRY AGAIN!");
 			getInput();
 		}
-		//if input is y, starts method on josh_testing class
+		//if input is y, returns to previous method
 		if(input2.toLowerCase().equals("y")) {
-			Josh_testing.main1();
+			return;
 		}
-		//if input is n, ends program
+		//if input is n, closes program
 		else if(input2.toLowerCase().equals("n")) {
 			System.out.println("CLOSING PROGRAM!");
+			System.exit(0);
 		}
 		
 	}
 	
+	private static void user1() {
+		System.out.println("Welcome " + input2);
+		run();
+		Josh_testing.main1();
+
+	}
+	
 	private static void user2() {
+		run();
 		User2_testing.main1();
 	}
 
