@@ -55,7 +55,7 @@ public class Testing {
 	private static void user1() {
 		System.out.println("Welcome " + input2);
 		run();
-		Josh_testing.main1();
+		Josh.main1();
 
 	}
 	
